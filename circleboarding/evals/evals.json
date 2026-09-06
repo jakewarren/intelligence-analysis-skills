@@ -1,0 +1,90 @@
+{
+  "skill_name": "circleboarding",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I need to quickly piece together what happened with the MOVEit Transfer zero-day exploitation campaign from 2023. The Cl0p ransomware group exploited CVE-2023-34362 before a patch was available, hitting hundreds of organizations including US government agencies and major corporations. Give me a Circleboard on this — what do we know across all the dimensions? I want to see the gaps too. Output it inline in chat.",
+      "expected_output": "A complete Circleboard covering all six dimensions (WHO, WHAT, HOW, WHEN, WHERE, WHY) with populated answers from known reporting on the MOVEit/Cl0p campaign, plus a So What? section and explicit gap inventory. Should demonstrate CTI incident/event mode framing, surface at least 2-3 gaps, and conclude with an analytic impact assessment.",
+      "assertions": [
+        {
+          "name": "all_six_dimensions_present",
+          "description": "Output contains all six dimension headers: WHO, WHAT, HOW, WHEN, WHERE, WHY"
+        },
+        {
+          "name": "so_what_present",
+          "description": "Output contains a 'So What?' section with an analytic impact statement"
+        },
+        {
+          "name": "gap_inventory_present",
+          "description": "Output explicitly identifies at least 2 knowledge gaps or unknowns"
+        },
+        {
+          "name": "cve_referenced",
+          "description": "CVE-2023-34362 or MOVEit SQL injection is mentioned under HOW or WHAT"
+        },
+        {
+          "name": "cl0p_attributed",
+          "description": "Cl0p ransomware group is identified under WHO"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "We just got a report that a China-nexus APT (suspected Volt Typhoon) has been found pre-positioning inside US critical infrastructure networks — water utilities, power grids, comms. I want to run a Circleboard on this to get a handle on what we know before we start doing deeper analysis. Threat actor mode. Can you produce an HTML output with the visual diagram?",
+      "expected_output": "A standalone HTML file with a visual circle diagram showing all six dimensions around a center 'So What?' node. The content should be in threat actor mode (profiling Volt Typhoon), covering living-off-the-land TTPs, pre-positioning objective, critical infrastructure targeting rationale, and gaps around attribution confidence. The HTML should be self-contained and render correctly.",
+      "assertions": [
+        {
+          "name": "html_output_produced",
+          "description": "Output is saved as an HTML file (not just inline markdown)"
+        },
+        {
+          "name": "svg_or_visual_circle_present",
+          "description": "HTML file contains SVG or visual representation of the circle diagram with six dimension nodes"
+        },
+        {
+          "name": "volt_typhoon_referenced",
+          "description": "Volt Typhoon or similar attribution is addressed in the WHO dimension"
+        },
+        {
+          "name": "lotl_mentioned",
+          "description": "Living-off-the-land (LOTL) or LOLbins tradecraft is addressed in HOW dimension"
+        },
+        {
+          "name": "pre_positioning_intent_addressed",
+          "description": "Pre-positioning / disruption-readiness intent is discussed in WHY dimension"
+        },
+        {
+          "name": "so_what_present",
+          "description": "So What section contains an impact/implications assessment and recommended action"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I'm generating indicators for a scenario where a North Korean threat actor (DPRK, likely Lazarus) is conducting a cryptocurrency exchange heist. Before I build the indicator list, run a Circleboard in indicator mode to help me think through what indicators we should be watching for and where the gaps in our collection are. Inline is fine.",
+      "expected_output": "A Circleboard in indicator mode, structured around what indicators each dimension suggests for a DPRK crypto heist scenario. Each dimension should surface 'who would emit', 'what would it look like', 'how might we miss it', 'when would we see it', 'where in the environment', and 'why this indicator matters'. Output should recommend follow-on indicator generation (IGVE) and note the gap between on-chain and off-chain visibility.",
+      "assertions": [
+        {
+          "name": "indicator_mode_used",
+          "description": "Output frames the analysis in indicator mode — asking what indicators each dimension would produce, not just describing the attack"
+        },
+        {
+          "name": "all_six_dimensions_present",
+          "description": "All six dimension headers present (WHO, WHAT, HOW, WHEN, WHERE, WHY)"
+        },
+        {
+          "name": "how_might_we_miss_it_addressed",
+          "description": "At least one dimension addresses detection gaps or how indicators might be missed"
+        },
+        {
+          "name": "so_what_present",
+          "description": "So What section connects to collection requirements or defensive priorities"
+        },
+        {
+          "name": "igve_or_followon_recommended",
+          "description": "IGVE or another follow-on SAT is recommended for indicator development"
+        }
+      ]
+    }
+  ]
+}

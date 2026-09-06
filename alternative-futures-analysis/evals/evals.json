@@ -1,0 +1,53 @@
+{
+  "skill_name": "alternative-futures-analysis",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Run an Alternative Futures Analysis on Taiwan Strait stability over the next 10 years. The two key drivers I've identified are: (1) U.S. commitment to Taiwan — ranging from strong and credible to weakened or ambiguous, and (2) PRC internal political stability — ranging from consolidated and confident to fragmented and pressured. Give me the four scenarios with names, narrative trajectories, implications for the U.S. Indo-Pacific posture, and a set of indicators I can monitor. Inline output is fine.",
+      "expected_output": "A structured AFA output with: a clearly labeled 2x2 matrix (either described or shown), four distinctly named scenarios with narrative trajectories, implications for each scenario, and an indicator set with at least 3-5 indicators per scenario. Should explicitly route to AFA (not MSG) because exactly two drivers were provided. Four scenario selection criteria should be applied.",
+      "files": [],
+      "expectations": [
+        "Routes to AFA method (not MSG) since exactly two drivers are provided",
+        "Produces exactly four scenarios arranged around the two-driver matrix",
+        "Each scenario has a distinctive memorable name (not just Quadrant 1/2/3/4)",
+        "Each scenario includes a narrative trajectory describing how events would unfold",
+        "Identifies implications for U.S. Indo-Pacific posture for at least one scenario",
+        "Produces an indicator set with at least 3 indicators per scenario",
+        "At least one scenario is identified or flagged as a nightmare/downside risk scenario",
+        "The two driver spectrums are clearly labeled with their extreme ends"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I need to run scenarios on the future of global AI governance over the next 7 years. I've been doing some brainstorming and I think there are at least four key drivers shaping this space: (1) whether major AI labs adopt voluntary self-regulation or resist it, (2) whether China and the US converge toward shared AI safety norms or diverge, (3) whether a major AI-caused catastrophic incident occurs in the next 2-3 years, and (4) how fast AI capabilities advance relative to alignment research. Can you run me through the full multiple scenarios generation process and give me the four most attention-deserving scenarios? I want to understand which ones I should be briefing decision-makers on.",
+      "expected_output": "A full MSG output with: recognition that 4 drivers require MSG not AFA, driver spectrum definitions, some description of the paired matrix process, selection of 4 attention-deserving scenarios from the larger scenario space, narrative trajectories, and an indicator set. Should flag which scenario represents the nightmare case and which is the mainline.",
+      "files": [],
+      "expectations": [
+        "Routes to MSG method (not AFA) because four drivers are provided",
+        "Defines spectrum ends for each of the four drivers",
+        "Produces more than four raw scenario combinations before selecting the final four",
+        "Selects exactly four final scenarios from the larger scenario space",
+        "Labels or identifies which scenario is the mainline/baseline and which is the nightmare",
+        "Produces indicator sets for the four selected scenarios",
+        "Addresses what decision makers should do about at least one scenario",
+        "Applies at least two of the five selection criteria (Downside Risk, Mainline, New Opportunity, Emerging Trend, Recognizable Anchor)"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I'm an analyst working on Venezuela. My team's current assessment is that Maduro stays in power through 2027 and the economic situation deteriorates further but doesn't collapse. My supervisor wants me to challenge that baseline with alternative futures before we finalize the product. What futures should we be considering? I want something I can take to a senior briefing — with scenarios, a quick read on which one we're tracking toward right now, and what we should be watching for.",
+      "expected_output": "Should recognize this as a scenario generation request even without explicit 'AFA' or 'MSG' keywords. Should identify key drivers, build scenarios, challenge the stated baseline, and produce a senior-briefing-ready output with scenario names, narratives, current trajectory assessment, and indicators. The skill should help identify which scenario best fits current trends.",
+      "files": [],
+      "expectations": [
+        "Recognizes this as an AFA/MSG request without the user explicitly naming the technique",
+        "Identifies 2+ key drivers for the Venezuela situation",
+        "Produces at least three distinct scenarios (ideally four)",
+        "Challenges the stated baseline — does not simply validate the Maduro-stays assessment",
+        "Identifies at least one scenario that was NOT the user's stated baseline",
+        "Includes a current trajectory assessment — which scenario present indicators most favor",
+        "Produces observable indicators the analyst can monitor",
+        "Output is structured appropriately for a senior briefing (labeled sections, not a wall of prose)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "skill_name": "swot-analysis",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Run a SWOT analysis on our SOC's ability to detect and respond to a Scattered Spider-style social engineering and ransomware attack. We have a 12-person SOC with good SIEM coverage, EDR on all endpoints, and a threat intel subscription. Weaknesses include no dedicated DFIR team, playbooks that haven't been updated since 2022, and no MFA on our help desk system. We operate in the financial services sector.",
+      "expected_output": "Full SWOT grid with 4-8 items per quadrant specific to the SOC/Scattered Spider scenario, TOWS Matrix with SO/WO/ST/WT strategies, prioritized strategic options, and cyber-specific content throughout. Should reference the Scattered Spider TTPs (vishing, SIM swapping, help desk social engineering) in the Threats quadrant and the help desk MFA gap in Weaknesses. TOWS strategies should be specific and actionable.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "I need a SWOT on APT29 (Cozy Bear) in the context of their ongoing targeting of Western foreign ministries and diplomatic missions. Focus on their current operational posture — what makes them effective, where they're exposed, what environmental conditions favor them, and what threatens their operations.",
+      "expected_output": "Mode 2 adversary assessment SWOT. Strengths should include confirmed APT29 TTPs (MagicWeb, FOGGYWEB, spearphishing diplomats, use of legitimate cloud services for C2). Weaknesses should reference known exposure/attribution history. Opportunities should cover diplomatic sector attack surface. Threats should include Western attribution campaigns, sanctions, and improving detection. TOWS should generate strategies from the adversary's perspective AND exploitation/disruption options for defenders.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We're deciding whether to build an in-house threat intelligence platform or buy a commercial TIP. Can you run a SWOT on the build option? We have a 4-person CTI team, decent Python skills, existing data sources (VirusTotal, Shodan, commercial feeds), but limited engineering support. The goal is a centralized platform for IOC management, analyst workflow, and reporting.",
+      "expected_output": "Mode 1 self-assessment SWOT focused on the build-vs-buy strategic question, with the 'build' option as the subject. Strengths: customization, no vendor dependency, team skills. Weaknesses: limited engineering support, opportunity cost, maintenance burden. Opportunities: open source tooling (MISP, OpenCTI), vendor integrations. Threats: feature creep, team turnover, commercial platforms rapidly closing capability gaps. TOWS strategies should help analyst make the decision.",
+      "files": []
+    }
+  ]
+}
