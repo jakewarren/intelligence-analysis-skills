@@ -9,13 +9,13 @@ The collection turns established Structured Analytic Techniques (SATs) into guid
 Install the collection interactively:
 
 ```sh
-npx skills add jakewarrren/intelligence-analysis-skills
+npx skills add jakewarren/intelligence-analysis-skills
 ```
 
 Preview the available skills without installing them:
 
 ```sh
-npx skills add jakewarrren/intelligence-analysis-skills --list
+npx skills add jakewarren/intelligence-analysis-skills --list
 ```
 
 After installation, ask your agent for a technique by name (for example, "run an ACH") or describe the analytic problem and let the skill's trigger description route the request.
